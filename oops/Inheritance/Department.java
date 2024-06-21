@@ -6,10 +6,16 @@ public class Department {
 
     private List<Student> students;
     private List<FacultyMember> faculty;
+    private List<UndergraduateStudent> undergraduateStudents;
+    private List<GraduateStudent> graduateStudents;
+
+
 
     public Department() {
         this.students = new ArrayList<>();
         this.faculty = new ArrayList<>();
+        this.undergraduateStudents = new ArrayList<>();
+        this.graduateStudents = new ArrayList<>();
     }
 
     public void addStudent(Student student) {
@@ -28,6 +34,27 @@ public class Department {
 
         return faculty;
     }
+
+
+    private List<GraduateStudent> getgraduateStudents() {
+        return graduateStudents;
+    }
+
+    private List<UndergraduateStudent> getundergraduateStudents() {
+        return undergraduateStudents;
+    }
+
+
+
+    public void addUndergraduateStudent(UndergraduateStudent undergraduateStudent) {
+        undergraduateStudents.add(undergraduateStudent);
+    }
+
+    public void addGraduateStudent(GraduateStudent graduateStudent) {
+        graduateStudents.add(graduateStudent);
+    }
+
+
     public static void main(String args[])
     {
 
@@ -56,5 +83,32 @@ public class Department {
         for (FacultyMember facultyMember : department.getfaculty()) {
             System.out.println(facultyMember);
         }
+
+
+        UndergraduateStudent student1 = new UndergraduateStudent(101.0, "Purvesh", "digital marketing", 4.2f);
+        UndergraduateStudent student2 = new UndergraduateStudent(102.0, "arjun", "hr", 3.8f);
+
+        GraduateStudent student3 = new GraduateStudent(103.0, "hrithick", "actor", 4.0f);
+        GraduateStudent student4 = new GraduateStudent(104.0, "roshan", "model", 3.9f);
+
+
+
+        department.addUndergraduateStudent(student1);
+        department.addUndergraduateStudent(student2);
+        department.addGraduateStudent(student3);
+        department.addGraduateStudent(student4);
+
+        for (UndergraduateStudent undergraduateStudent :department.getundergraduateStudents()) {
+            System.out.println(undergraduateStudent);
+        }
+
+        for (GraduateStudent graduateStudent : department.getgraduateStudents()) {
+            System.out.println(graduateStudent);
+        }
+
+
     }
+
+
+
 }
