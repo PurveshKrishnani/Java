@@ -9,7 +9,6 @@ public class ByteArrayInputStream_ByteArrayOutputStream {
             fos.write(data);
         }
     }
-
     private static byte[] readBytesFromFile (String filePath) throws IOException {
         try (ByteArrayOutputStream writeFile = new ByteArrayOutputStream()) {
             try (FileInputStream fileInputStream = new FileInputStream(filePath)) {
@@ -27,6 +26,7 @@ public class ByteArrayInputStream_ByteArrayOutputStream {
     public static void main(String[] args) {
         String inputFilePath = "C:/Users/PurveshKrishnani/Desktop/Info services/StreamsFileHanding/input.txt";
         String outputFilePath = "C:/Users/PurveshKrishnani/Desktop/Info services/StreamsFileHanding/output.txt";
+
 
         try {
             byte[] inputData = readBytesFromFile(inputFilePath);
