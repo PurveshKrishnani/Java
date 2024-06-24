@@ -1,0 +1,12 @@
+----------------Byte Streams---------------------
+Byte streams process data byte by byte (8 bits at a time).
+They are used for reading and writing binary data, such as images, audio, video, and other non-textual data.
+Byte streams do not perform any character encoding or decoding. They treat the data as a sequence of raw bytes.
+Common byte stream classes include FileInputStream, FileOutputStream, BufferedInputStream, and BufferedOutputStream.
+
+
+-----------------------Character Streams ------------------
+Character streams process data character by character (16 bits at a time).
+They are used for reading and writing textual data, such as text files, strings, and other human-readable information.
+Character streams automatically handle character encoding and decoding, converting the data to and from the underlying byte stream using a specific character encoding, such as UTF-8 or ASCII.
+Common character stream classes include FileReader, FileWriter, BufferedReader, and BufferedWriter.
